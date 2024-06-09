@@ -1,0 +1,20 @@
+meta {
+  name: Update Activity
+  type: http
+  seq: 4
+}
+
+put {
+  url: http://localhost:8888/activity/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "bruh",
+    "date_start": "2023-12-02 07:00",
+    "date_end": "2023-12-02 08:00",
+    "project_id": 2
+  }
+}

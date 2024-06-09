@@ -1,0 +1,17 @@
+meta {
+  name: Get user activities
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8888/activities?user_id=1
+  body: none
+  auth: none
+}
+
+query {
+  user_id: 1
+  ~project: Desain UI,Desain Logo
+  ~search: meet
+}

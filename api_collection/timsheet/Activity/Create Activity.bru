@@ -1,0 +1,21 @@
+meta {
+  name: Create Activity
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8888/activity
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "halo",
+    "date_start": "2023-12-20 08:00",
+    "date_end": "2023-12-20 20:00",
+    "project_id": 2,
+    "user_id": 1
+  }
+}
