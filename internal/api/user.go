@@ -45,7 +45,7 @@ func (server *Server) GetUser(ctx *gin.Context) {
 		return
 	}
 
-	ctx.JSON(http.StatusOK, user)
+	ctx.JSON(http.StatusOK, h.SuccessHttpResponse("success", user))
 }
 
 func (server *Server) UpdateUser(ctx *gin.Context) {
@@ -80,5 +80,5 @@ func (server *Server) UpdateUser(ctx *gin.Context) {
 		return
 	}
 
-	ctx.JSON(http.StatusOK, user)
+	ctx.JSON(http.StatusOK, h.SuccessHttpResponse("success", user))
 }

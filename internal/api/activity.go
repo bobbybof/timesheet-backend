@@ -73,7 +73,7 @@ func (server *Server) CreateActivity(ctx *gin.Context) {
 		return
 	}
 
-	ctx.JSON(http.StatusOK, activity)
+	ctx.JSON(http.StatusOK, h.SuccessHttpResponse("success", activity))
 }
 
 func (server *Server) UpdateActivity(ctx *gin.Context) {
@@ -123,7 +123,7 @@ func (server *Server) UpdateActivity(ctx *gin.Context) {
 		return
 	}
 
-	ctx.JSON(http.StatusOK, activity)
+	ctx.JSON(http.StatusOK, h.SuccessHttpResponse("success", activity))
 }
 
 func (server *Server) DeleteActivity(ctx *gin.Context) {

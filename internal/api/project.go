@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	e "github.com/bobbybof/timesheet/error"
+	h "github.com/bobbybof/timesheet/internal/helper"
 	"github.com/gin-gonic/gin"
 )
 
@@ -25,7 +26,7 @@ func (server *Server) CreateProject(ctx *gin.Context) {
 		return
 	}
 
-	ctx.JSON(http.StatusOK, proj)
+	ctx.JSON(http.StatusOK, h.SuccessHttpResponse("success", proj))
 }
 
 func (server *Server) GetProjects(ctx *gin.Context) {
@@ -35,5 +36,5 @@ func (server *Server) GetProjects(ctx *gin.Context) {
 		return
 	}
 
-	ctx.JSON(http.StatusOK, projects)
+	ctx.JSON(http.StatusOK, h.SuccessHttpResponse("success", projects))
 }
