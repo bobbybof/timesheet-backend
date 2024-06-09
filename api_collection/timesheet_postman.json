@@ -1,0 +1,136 @@
+{
+  "info": {
+    "name": "timesheet",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Get User",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8888/user/1"
+          }
+        },
+        {
+          "name": "Update User",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": "http://localhost:8888/user/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"abanda\",\n  \"rate\": 15000\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Activity",
+      "item": [
+        {
+          "name": "Get user activities",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8888/activities?search&projects=Desain Logo&user_id=1"
+          }
+        },
+        {
+          "name": "Create Activity",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:8888/activity",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"halo\",\n  \"date_start\": \"2024-06-09 08:00\",\n  \"date_end\": \"2024-06-09 20:00\",\n  \"project_id\": 2,\n  \"user_id\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete activity",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8888/activity/4"
+          }
+        },
+        {
+          "name": "Update Activity",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": "http://localhost:8888/activity/1",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"bruh\",\n  \"date_start\": \"2023-12-02 07:00\",\n  \"date_end\": \"2023-12-02 08:00\",\n  \"project_id\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Project",
+      "item": [
+        {
+          "name": "Create Project",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": "http://localhost:8888/project",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"test project\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Get Project",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8888/projects"
+          }
+        }
+      ]
+    }
+  ],
+  "variable": []
+}
