@@ -33,7 +33,7 @@ type getActivityByIdRequest struct {
 
 type getDataQueryParams struct {
 	Search  string `form:"search"`
-	Project string `form:"project"`
+	Project string `form:"projects"`
 	UserId  string `form:"user_id" binding:"required"`
 }
 

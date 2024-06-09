@@ -4,7 +4,7 @@ VALUES
 
 INSERT INTO projects (name)
 VALUES
-    ('Web Develompont'),
+    ('Web Develompent'),
     ('Desain UI'),
     ('Desain Logo'),
     ('Dokumentasi');
